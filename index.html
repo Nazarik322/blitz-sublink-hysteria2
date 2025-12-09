@@ -75,7 +75,7 @@
                             <div class="app-tab-pane active" id="tab-pc">
                                 <img src="{{ sublink_qrcode }}" alt="Universal Subscription QR Code" class="qrcode">
                                 <button class="btn btn-primary" onclick="copyToClipboard('{{ sub_link }}')">
-                                    <i class="fas fa-copy"></i> Скопировать универсальную ссылку
+                                    <i class="fas fa-copy"></i> Скопировать подписку
                                 </button>
                                 <a class="btn btn-primary"
                                     href="https://github.com/KaringX/karing/releases/download/v1.2.8.1103/karing_1.2.8.1103_windows_x64.exe"
@@ -86,7 +86,7 @@
                             <div class="app-tab-pane" id="tab-android">
                                 <img src="{{ sublink_qrcode }}" alt="Universal Subscription QR Code" class="qrcode">
                                 <button class="btn btn-primary" onclick="copyToClipboard('{{ sub_link }}')">
-                                    <i class="fas fa-copy"></i> Скопировать универсальную ссылку
+                                    <i class="fas fa-copy"></i> Скопировать подписку
                                 </button>
                                 <a class="btn btn-primary"
                                     href="https://github.com/KaringX/karing/releases/download/v1.2.8.1103/karing_1.2.8.1103_android_arm64-v8a.apk"
@@ -97,7 +97,7 @@
                             <div class="app-tab-pane" id="tab-ios">
                                 <img src="{{ sublink_qrcode }}" alt="Universal Subscription QR Code" class="qrcode">
                                 <button class="btn btn-primary" onclick="copyToClipboard('{{ sub_link }}')">
-                                    <i class="fas fa-copy"></i> Скопировать универсальную ссылку
+                                    <i class="fas fa-copy"></i> Скопировать подписку
                                 </button>
                                 <a class="btn btn-primary" href="https://apps.apple.com/ca/app/karing/id6472431552"
                                     target="_blank">
@@ -114,21 +114,28 @@
             <section class="card uri-section">
                 <div class="card-header">
                     <i class="fas fa-globe"></i>
-                    <h2>Внешний узел URIs</h2>
+                    <h2>Инструкция</h2>
                 </div>
                 <div class="card-body">
-                    <div class="qr-grid">
+                    <div class="instruction-grid">
                         {% for item in node_uris %}
-                        <div class="qr-item">
-                            <h3 class="qr-title">{{ item.label }}</h3>
-                            {% if item.qrcode %}
-                            <img src="{{ item.qrcode }}" alt="{{ item.label }} QR Code" class="qrcode">
-                            <button class="btn btn-secondary" onclick="copyToClipboard('{{ item.uri }}')">
-                                <i class="fas fa-copy"></i> Скопировать URI
-                            </button>
-                            {% else %}
-                            <p class="uri-unavailable">URI недоступен</p>
-                            {% endif %}
+                        <div class="instruction-item">
+                            <h3>Инструкция по установке:</h3>
+                            <p>1. Запустить .exe файл ---> "Да".</p>
+                            <img src="Screenshot_1.png" alt="Screenshot_1" class="image_1">
+                            <img src="Screenshot_2.png" alt="Screenshot_2" class="image_2">
+                            <p>2. Нажать "ОК" ---> "Далее" ---> "Далее" ---> "Установить" ---> дождаться установки ---> Снять галочку с запуска программы ---> "Завершить".</p>
+                            <img src="Screenshot_3.png" alt="Screenshot_3" class="image_3">
+                            <p>3. На рабочем столе "ПКМ" (правая кнопка мыши) ---> "Запустить от имени администратора" ---> "Да".</p>
+                            <img src="Screenshot_4.png" alt="Screenshot_4" class="image_4">
+                            <p>4. Нажать "Accept & Contine".</p>
+                            <img src="Screenshot_5.png" alt="Screenshot_5" class="image_5">
+                            <p>5. Нажать "Русский" ---> "Дальше".</p>
+                            <img src="Screenshot_6.png" alt="Screenshot_6" class="image_6">
+                            <p>Нажать "Дальше"</p>
+                            <img src="Screenshot_7.png" alt="Screenshot_7" class="image_7">
+                            <p>Включить все правила, кроме правила "Game" ---> "Дальше"</p>
+                            <img src="Screenshot_8.png" alt="Screenshot_8" class="image_8"><img src="Screenshot_9.png" alt="Screenshot_9" class="image_9">
                         </div>
                         {% endfor %}
                     </div>
