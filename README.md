@@ -1,5 +1,5 @@
 # blitz-sublink-hysteria2
-Sublink для панели Blitz с протоколом hysteria2
+Sublink для панели Blitz (https://github.com/ReturnFI/Blitz) с протоколом hysteria2
 
 В ссылках приложение Karling с маршрутизацией для РФ и др. стран.
 
